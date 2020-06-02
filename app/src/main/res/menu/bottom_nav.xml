@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/fragmentOne"
+        android:contentDescription="首页"
+        android:icon="@drawable/icon_search_normal"
+        android:title="首页" />
+    <item
+        android:id="@+id/fragmentTwo"
+        android:contentDescription="二页"
+        android:icon="@drawable/icon_system_normal"
+        android:title="二页" />
+    <item
+        android:id="@+id/fragmentThree"
+        android:contentDescription="三页"
+        android:icon="@drawable/icon_mine_normal"
+        android:title="三页" />
+</menu>
