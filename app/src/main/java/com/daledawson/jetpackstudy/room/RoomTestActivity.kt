@@ -19,6 +19,9 @@ class RoomTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room)
+        var position: String = intent.getStringExtra("position")
+        var traceId: String = intent.getStringExtra("traceId")
+        Log.d("TAG", "position= $position+ traceId= $traceId")
         roomTest()
     }
 
@@ -44,7 +47,7 @@ class RoomTestActivity : AppCompatActivity() {
 
         add.setOnClickListener {
             val personDao = PersonRoomDatabase.getPersonRoomDatabase(this).personDao()
-            val person = Person("张三",18)
+            val person = Person("张三", 18)
             personDao.insert(person)
             Log.d(Common.TAG, "插入数据：$person")
             personList = personDao.getPersonList()

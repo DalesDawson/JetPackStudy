@@ -48,6 +48,20 @@
             android:background="@color/cardview_shadow_end_color"
             android:text="CameraX"
             android:textColor="@android:color/black" />
+        <Button
+            android:id="@+id/dataBinding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_shadow_end_color"
+            android:text="dataBinding"
+            android:textColor="@android:color/black" />
+        <Button
+            android:id="@+id/lifecycle_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_shadow_end_color"
+            android:text="lifecycle"
+            android:textColor="@android:color/black" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

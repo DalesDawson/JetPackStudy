@@ -31,6 +31,10 @@ android {
     kotlinOptions {
         jvmTarget = rootProject.ext.java_version
     }
+    //引入对 DataBinding 的支持
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -56,11 +60,16 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     // CameraX 核心库使用 camera2 实现
-    implementation "androidx.camera:camera-camera2:1.0.0-beta04"
+    implementation "androidx.camera:camera-camera2:1.0.0-beta05"
     // 可以使用CameraView
-    implementation "androidx.camera:camera-view:1.0.0-alpha11"
+    implementation "androidx.camera:camera-view:1.0.0-alpha12"
     // 可以使用供应商扩展
-    implementation "androidx.camera:camera-extensions:1.0.0-alpha11"
+    implementation "androidx.camera:camera-extensions:1.0.0-alpha12"
     //camerax的生命周期库
-    implementation "androidx.camera:camera-lifecycle:1.0.0-beta04"
+    implementation "androidx.camera:camera-lifecycle:1.0.0-beta05"
+    // lifecycle
+    def lifecycle_version = "2.2.0-alpha02"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
+    kapt "android.arch.lifecycle:compiler:$lifecycle_version"
 }
