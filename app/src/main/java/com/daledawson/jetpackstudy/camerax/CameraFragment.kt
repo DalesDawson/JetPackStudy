@@ -107,7 +107,7 @@ class CameraFragment : Fragment() {
 
     /**
      * We need a display listener for orientation changes that do not trigger a configuration
-     * change, for example if we choose to override config change in manifest or for 180-degree
+     * change, for example.proto if we choose to override config change in manifest or for 180-degree
      * orientation changes.
      */
     private val displayListener = object : DisplayManager.DisplayListener {

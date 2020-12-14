@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, NavActivity::class.java))
         }
         camerax.setOnClickListener {
-            requestPermission.launch(Manifest.permission.CAMERA)
+
             startActivity(Intent(this, CameraXActivity::class.java))
         }
         dataBinding.setOnClickListener {
@@ -51,12 +51,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, FirstActivity::class.java))
         }
     }
-
-    // 请求单个权限
-    private val requestPermission =
-        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
-            // Do something if permission granted
-            if (isGranted) Toast.makeText(this, "Permission is granted", Toast.LENGTH_LONG).show()
-            else Toast.makeText(this, "Permission is denied", Toast.LENGTH_LONG).show()
-        }
 }

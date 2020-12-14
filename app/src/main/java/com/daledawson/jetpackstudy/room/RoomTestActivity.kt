@@ -19,8 +19,8 @@ class RoomTestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_room)
-        var position: String = intent.getStringExtra("position")
-        var traceId: String = intent.getStringExtra("traceId")
+        var position: String? = intent.getStringExtra("position")
+        var traceId: String? = intent.getStringExtra("traceId")
         Log.d("TAG", "position= $position+ traceId= $traceId")
         roomTest()
     }

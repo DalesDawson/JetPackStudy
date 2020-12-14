@@ -1,6 +1,7 @@
 package com.daledawson.jetpackstudy.lifecycle
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
@@ -20,6 +21,7 @@ class LifeCycleActivity : AppCompatActivity(), LifecycleOwner {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lifecycle)
+        Log.d("activity111","---onCreate")
 
         lifecycleRegistry = LifecycleRegistry(this)
         lifecycleRegistry.addObserver(AppLifecycleListener())
@@ -27,23 +29,35 @@ class LifeCycleActivity : AppCompatActivity(), LifecycleOwner {
 
     }
 
+    override fun onStart() {
+        super.onStart()
+        Log.d("activity111","---onStart")
+    }
+
     override fun onResume() {
         super.onResume()
+        Log.d("activity111","---onResume")
         lifecycleRegistry.markState(Lifecycle.State.RESUMED)
     }
 
     override fun onPause() {
         super.onPause()
+        Log.d("activity111","---onPause")
         lifecycleRegistry.markState(Lifecycle.State.STARTED)
     }
 
-//    override fun getLifecycle(): Lifecycle {
-//        return lifecycleRegistry
-//    }
-
+    override fun onStop() {
+        super.onStop()
+        Log.d("activity111","---onStop")
+    }
     override fun onDestroy() {
         super.onDestroy()
+        Log.d("activity111","---onDestroy")
         lifecycleRegistry.markState(Lifecycle.State.DESTROYED)
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("activity111","---onRestart")
+    }
 }

@@ -43,6 +43,7 @@ class DataStoreActivity : AppCompatActivity() {
                 dataFlow.collect { value -> println(value) }
             }
         }
+
     }
 
     private val dataStore: DataStore<Preferences> = this.createDataStore(
@@ -59,7 +60,7 @@ class DataStoreActivity : AppCompatActivity() {
 //        }
 
     // Write to a Preferences DataStore
-    suspend fun saveData() {
+    private suspend fun saveData() {
         dataStore.edit { settings ->
 //            val currentCounterValue = settings[dataStoreKey] ?: ""
             settings[dataStoreKey] = "我是存入的数据"+System.currentTimeMillis()
