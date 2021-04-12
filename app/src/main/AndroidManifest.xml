@@ -38,6 +38,7 @@
         <activity android:name=".DataStore.DataStoreActivity" />
         <activity android:name="Activity_Results_API.FirstActivity" />
         <activity android:name="Activity_Results_API.SecondActivity" />
+        <activity android:name=".livedata.NameActivity" />
     </application>
 
 </manifest>

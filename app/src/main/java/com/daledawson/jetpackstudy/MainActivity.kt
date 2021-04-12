@@ -13,6 +13,7 @@ import com.daledawson.jetpackstudy.Navigation.NavActivity
 import com.daledawson.jetpackstudy.camerax.CameraXActivity
 import com.daledawson.jetpackstudy.databinding.DataBindingTest
 import com.daledawson.jetpackstudy.lifecycle.LifeCycleActivity
+import com.daledawson.jetpackstudy.livedata.NameActivity
 import com.daledawson.jetpackstudy.room.Person
 import com.daledawson.jetpackstudy.room.PersonRoomDatabase
 import com.daledawson.jetpackstudy.room.RoomTestActivity
@@ -49,6 +50,9 @@ class MainActivity : AppCompatActivity() {
         }
         ResultsAPI_btn.setOnClickListener {
             startActivity(Intent(this, FirstActivity::class.java))
+        }
+        LiveData_btn.setOnClickListener {
+            startActivity(Intent(this, NameActivity::class.java))
         }
     }
 }

@@ -68,7 +68,7 @@ dependencies {
     //camerax的生命周期库
     implementation "androidx.camera:camera-lifecycle:1.0.0-beta05"
     // lifecycle
-    def lifecycle_version = "2.2.0-alpha02"
+    def lifecycle_version = "2.2.0"
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
     kapt "android.arch.lifecycle:compiler:$lifecycle_version"
